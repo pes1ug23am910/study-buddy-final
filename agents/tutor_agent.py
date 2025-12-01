@@ -1,11 +1,10 @@
 """
-Tutor Agent
-
-Explains concepts using mixed-mode output:
-Explanation → Key Points → Flashcards → Quiz
-
-This creates a complete learning experience in a single response.
-"""
+# tutor_agent.py
+# ===============
+# This agent explains concepts in a pretty cool way - instead of just dumping
+# text at you, it gives you a structured response with explanation, key points,
+# flashcards you can study from, and a quick quiz to check understanding.
+# I call it "mixed-mode" because it mixes different learning formats together.
 
 from google.adk.agents import LlmAgent
 from google.adk.tools import google_search

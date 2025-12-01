@@ -34,25 +34,22 @@ class SpacedRepetitionScheduler:
         performance: float
     ) -> datetime:
         """
-        Calculate when the next review should happen.
+        Figures out when you should review this topic again.
         
-        Args:
-            last_review: When the topic was last reviewed
-            repetition_number: How many times reviewed (0 = first time)
-            performance: Score from 0-1 (1 = perfect)
-        
-        Returns:
-            datetime for the next scheduled review
+        The idea is simple:
+        - Did great (80%+)? Cool, we can wait longer before reviewing.
+        - Did okay (60-80%)? Standard interval is fine.
+        - Struggled (<60%)? Let's review sooner and maybe go back a step.
         """
-        # Adjust based on performance
+        # tweak the interval based on how well they did
         if performance >= 0.8:
-            # Did well - can wait longer
+            # nailed it - push the next review out a bit
             ease_adjustment = 1.2
         elif performance >= 0.6:
-            # Decent - standard interval
+            # decent, keep normal schedule
             ease_adjustment = 1.0
         else:
-            # Struggled - review sooner and step back
+            # hmm, struggled here - bring review closer and step back
             ease_adjustment = 0.7
             repetition_number = max(0, repetition_number - 1)
         

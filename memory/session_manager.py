@@ -1,9 +1,10 @@
 """
-Session Management for StudyBuddy
-
-Handles session persistence, context tracking, and long-term memory.
-Combines file-based persistence with ADK's session services.
-"""
+# session_manager.py
+# ===================
+# This is where we keep track of what each student has been working on.
+# We save their progress, quiz scores, and study plans so they can pick up
+# right where they left off next time. Pretty important for the whole
+# "personalized learning" thing to actually work!
 
 import os
 import json
@@ -18,14 +19,14 @@ from config.settings import (
 
 class StudyBuddySession:
     """
-    Manages session state for a student.
+    Keeps track of everything about a student's learning session.
     
-    Tracks:
-    - Current learning topic
-    - Active study plan
-    - Quiz results history
-    - Spaced repetition schedule
-    - Interaction history
+    Think of it like a folder for each student that holds:
+    - What topic they're currently studying
+    - Their study plan (if they have one)
+    - All their quiz scores so far
+    - When they need to review stuff
+    - Recent conversation history
     """
     
     def __init__(self, student_name: str):

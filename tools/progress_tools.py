@@ -1,9 +1,9 @@
 """
-Progress Tracking Tools for StudyBuddy
-
-Tools for recording quiz results, updating progress, and managing spaced repetition.
-These are designed to work with the ADK tool system.
-"""
+# progress_tools.py
+# ==================
+# These are the tools that make the "adaptive" part of adaptive learning work.
+# They record quiz results, track which topics you're good at (and not so good at),
+# and figure out when you should review stuff based on spaced repetition.
 
 import json
 from datetime import datetime
@@ -24,22 +24,10 @@ def record_quiz_result(
     tool_context: ToolContext,
 ) -> Dict[str, Any]:
     """
-    Store quiz results in session state for adaptive learning.
-    
-    This tool records performance data that can be used by:
-    - Learning planner to adjust study plans
-    - Quiz agent to adapt difficulty
-    - Spaced repetition system to schedule reviews
-    
-    Args:
-        topic: The topic that was quizzed
-        score: Score achieved (0-100)
-        total_questions: Number of questions in the quiz
-        notes: Brief notes about performance/weaknesses
-        tool_context: ADK tool context with session state
-    
-    Returns:
-        Status and updated topic statistics
+    Saves quiz results so we can track how someone's doing over time.
+    This data feeds into the learning planner, quiz difficulty adjustments,
+    and the spaced repetition scheduler. Basically, it's how we "remember"
+    what you're good at and what needs more work.
     """
     state = tool_context.state
     

@@ -23,9 +23,8 @@ from config.settings import APP_NAME, DEFAULT_USER_ID, DEFAULT_SESSION_ID
 
 async def run_interactive():
     """
-    Run Study Buddy in interactive CLI mode.
-    
-    This creates a session and loops for user input until 'exit' is entered.
+    Starts the interactive chat mode. Just keeps asking for input
+    until you type 'exit'. Saves your progress automatically.
     """
     # Get student name
     print("\n" + "=" * 60)
@@ -132,14 +131,8 @@ async def run_interactive():
 
 async def run_query(student_name: str, query: str) -> str:
     """
-    Run a single query programmatically.
-    
-    Args:
-        student_name: Name of the student
-        query: The query to process
-    
-    Returns:
-        Agent response text
+    Send a single question/request to Study Buddy and get a response.
+    Handy if you want to use this from another script or notebook.
     """
     # Load session
     session = StudyBuddySession.load(student_name)

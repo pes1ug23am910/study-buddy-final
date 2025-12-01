@@ -1,8 +1,9 @@
 """
-Custom Tools for StudyBuddy
-
-File I/O, progress tracking, and utility tools.
-"""
+# file_tools.py
+# ==============
+# Simple utilities for saving stuff to files.
+# Study plans get saved as markdown, notes too.
+# Nothing fancy here, just making sure students can export their work.
 
 import os
 import json
@@ -14,14 +15,8 @@ from config.settings import OUTPUT_DIR, STUDY_PLANS_DIR
 
 def save_study_plan_to_file(filename: str, content: str) -> str:
     """
-    Save a study plan to a markdown file.
-    
-    Args:
-        filename: Name of the file (will be saved in study_plans directory)
-        content: The study plan content (markdown format)
-    
-    Returns:
-        Success/failure message
+    Saves a study plan to a markdown file. Pretty straightforward -
+    just dumps the content to output/study_plans/whatever.md
     """
     try:
         os.makedirs(STUDY_PLANS_DIR, exist_ok=True)
