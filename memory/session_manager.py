@@ -1,10 +1,11 @@
 """
-# session_manager.py
-# ===================
-# This is where we keep track of what each student has been working on.
-# We save their progress, quiz scores, and study plans so they can pick up
-# right where they left off next time. Pretty important for the whole
-# "personalized learning" thing to actually work!
+session_manager.py
+===================
+This is where we keep track of what each student has been working on.
+We save their progress, quiz scores, and study plans so they can pick up
+right where they left off next time. Pretty important for the whole
+personalized learning thing to actually work!
+"""
 
 import os
 import json

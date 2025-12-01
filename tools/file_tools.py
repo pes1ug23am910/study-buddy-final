@@ -1,9 +1,10 @@
 """
-# file_tools.py
-# ==============
-# Simple utilities for saving stuff to files.
-# Study plans get saved as markdown, notes too.
-# Nothing fancy here, just making sure students can export their work.
+file_tools.py
+==============
+Simple utilities for saving stuff to files.
+Study plans get saved as markdown, notes too.
+Nothing fancy here, just making sure students can export their work.
+"""
 
 import os
 import json

@@ -1,12 +1,13 @@
 """
-# study_buddy_agent.py
-# =====================
-# This is the main "brain" of the system. It's like a receptionist that
-# listens to what you need and sends you to the right specialist:
-# - Need a study plan? -> goes to the planner agent
-# - Want something explained? -> tutor agent handles it
-# - Want to test yourself? -> quiz agent's got you
-# - Curious about your progress? -> progress tracker gives the stats
+study_buddy_agent.py
+=====================
+This is the main "brain" of the system. It's like a receptionist that
+listens to what you need and sends you to the right specialist:
+- Need a study plan? -> goes to the planner agent
+- Want something explained? -> tutor agent handles it
+- Want to test yourself? -> quiz agent's got you
+- Curious about your progress? -> progress tracker gives the stats
+"""
 
 from google.adk.agents import LlmAgent
 from google.adk.tools import google_search

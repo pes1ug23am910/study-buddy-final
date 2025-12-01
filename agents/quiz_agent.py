@@ -1,11 +1,12 @@
 """
-# quiz_agent.py
-# ==============
-# The quiz master! This agent can:
-# 1. Create quizzes on any topic (with different difficulty levels)
-# 2. Grade your answers and give detailed feedback
-# 3. Record your scores so we can track progress over time
-# 4. Update your review schedule based on how you did
+quiz_agent.py
+==============
+The quiz master! This agent can:
+1. Create quizzes on any topic (with different difficulty levels)
+2. Grade your answers and give detailed feedback
+3. Record your scores so we can track progress over time
+4. Update your review schedule based on how you did
+"""
 
 from typing import Any, Dict
 

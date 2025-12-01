@@ -1,9 +1,10 @@
 """
-# progress_tools.py
-# ==================
-# These are the tools that make the "adaptive" part of adaptive learning work.
-# They record quiz results, track which topics you're good at (and not so good at),
-# and figure out when you should review stuff based on spaced repetition.
+progress_tools.py
+==================
+These are the tools that make the "adaptive" part of adaptive learning work.
+They record quiz results, track which topics you're good at (and not so good at),
+and figure out when you should review stuff based on spaced repetition.
+"""
 
 import json
 from datetime import datetime
@@ -26,7 +27,7 @@ def record_quiz_result(
     """
     Saves quiz results so we can track how someone's doing over time.
     This data feeds into the learning planner, quiz difficulty adjustments,
-    and the spaced repetition scheduler. Basically, it's how we "remember"
+    and the spaced repetition scheduler. Basically, it's how we remember
     what you're good at and what needs more work.
     """
     state = tool_context.state

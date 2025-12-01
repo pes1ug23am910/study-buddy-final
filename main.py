@@ -97,13 +97,13 @@ async def run_interactive():
             full_query = f"Context:\n{context}\n\nUser: {user_input}"
             
             # Create message
-            content = Content(role="user", parts=[Part.from_text(full_query)])
+            content = Content(role="user", parts=[Part(text=full_query)])
             
             # Run agent
             log_event("study_buddy", "Processing request", {"query": user_input[:50]})
             
             final_text = ""
-            async for event in runner.run(
+            for event in runner.run(
                 user_id=student_name,
                 session_id=f"{student_name}_session",
                 new_message=content,
@@ -158,11 +158,11 @@ async def run_query(student_name: str, query: str) -> str:
     context = session.get_context()
     full_query = f"Context:\n{context}\n\nUser: {query}"
     
-    content = Content(role="user", parts=[Part.from_text(full_query)])
+    content = Content(role="user", parts=[Part(text=full_query)])
     
     # Run and collect response
     final_text = ""
-    async for event in runner.run(
+    for event in runner.run(
         user_id=student_name,
         session_id=f"{student_name}_session",
         new_message=content,
