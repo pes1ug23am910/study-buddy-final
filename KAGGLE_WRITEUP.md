@@ -68,12 +68,12 @@ study_buddy_agent (the "receptionist")
 
 I needed to implement 3 of these for the project. Ended up using 6:
 
-✅ **Multi-Agent System** - 5 agents coordinated by an orchestrator  
-✅ **Tools** - Google Search + 6 custom tools  
-✅ **Sessions & Memory** - saves progress to JSON files  
-✅ **Loop Agents** - validators that retry until output is good  
-✅ **Spaced Repetition** - the scheduling algorithm  
-✅ **Context Engineering** - injects session history into prompts  
+- **Multi-Agent System** - 5 agents coordinated by an orchestrator  
+- **Tools** - Google Search + 6 custom tools  
+- **Sessions & Memory** - saves progress to JSON files  
+- **Loop Agents** - validators that retry until output is good  
+- **Spaced Repetition** - the scheduling algorithm  
+- **Context Engineering** - injects session history into prompts  
 
 Also using Gemini 2.0 Flash for all the agents (that's the bonus points thing).
 
@@ -94,20 +94,20 @@ output/
 
 **StudyBuddy:**
 ```
-### 1. 📖 Explanation
+### 1. Explanation
 A Binary Search Tree is basically a way to organize data...
 [clear explanation with examples]
 
-### 2. 🎯 Key Points
-• Left side = smaller values
-• Right side = bigger values
-• Finding stuff is fast: O(log n)
+### 2. Key Points
+* Left side = smaller values
+* Right side = bigger values
+* Finding stuff is fast: O(log n)
 
-### 3. 🗂️ Flashcards
+### 3. Flashcards
 Q: What makes a BST "balanced"?
 A: Left and right subtrees differ by at most 1 level
 
-### 4. ✏️ Quick Quiz
+### 4. Quick Quiz
 1. Where would 30 go if the root is 50?
 ```
 
@@ -162,4 +162,4 @@ I'm genuinely excited about using this myself. And if it helps other students st
 **Built with:** Google ADK + Gemini 2.0 Flash  
 **December 2025**
 
-🎓 Learning shouldn't be this hard. Let's fix that.
+Learning shouldn't be this hard. Let's fix that.
