@@ -126,7 +126,7 @@ Type 'exit' to quit, 'help' for commands.
 
 ---
 
-## 💬 Example Interactions
+## Example Interactions
 
 ### Create a Study Plan
 ```
