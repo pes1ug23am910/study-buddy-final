@@ -1,0 +1,22 @@
+# StudyBuddy Dependencies
+
+# Google AI and ADK
+google-genai>=0.2.0
+google-generativeai>=0.8.0
+
+# Async support
+aiohttp>=3.9.0
+
+# Environment management
+python-dotenv>=1.0.0
+
+# Rich console output and formatting
+rich>=13.0.0
+
+# Optional: Testing
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+
+# Optional: For future enhancements
+# matplotlib>=3.8.0  # Analytics dashboard
+# pandas>=2.1.0      # Data analysis

@@ -1,0 +1,76 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "StudentProfile",
+  "description": "Schema for storing student learning profile and progress",
+  "type": "object",
+  "properties": {
+    "student_name": {
+      "type": "string",
+      "description": "Unique identifier for the student"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the profile was created"
+    },
+    "last_active": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Last interaction timestamp"
+    },
+    "preferences": {
+      "type": "object",
+      "properties": {
+        "difficulty_level": {
+          "type": "string",
+          "enum": ["beginner", "intermediate", "advanced", "exam-prep"]
+        },
+        "study_hours_per_day": {
+          "type": "number"
+        },
+        "preferred_subjects": {
+          "type": "array",
+          "items": {"type": "string"}
+        }
+      }
+    },
+    "progress": {
+      "type": "object",
+      "description": "Topic-wise progress tracking",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "attempts": {"type": "integer"},
+          "last_score": {"type": "number"},
+          "best_score": {"type": "number"},
+          "total_answered": {"type": "integer"},
+          "notes": {"type": "string"},
+          "last_updated": {"type": "string", "format": "date-time"}
+        }
+      }
+    },
+    "spaced_repetition": {
+      "type": "object",
+      "description": "Review scheduling data",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "repetition_number": {"type": "integer"},
+          "last_review": {"type": "string", "format": "date-time"},
+          "next_review": {"type": "string", "format": "date-time"},
+          "performance_history": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "date": {"type": "string", "format": "date-time"},
+                "score": {"type": "number"}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": ["student_name", "created_at"]
+}
