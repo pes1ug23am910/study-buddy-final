@@ -1,4 +1,4 @@
-# 🎓 StudyBuddy - AI-Powered Learning Companion
+#  StudyBuddy - AI-Powered Learning Companion
 
 **Track:** Agents for Good  
 **Built with:** Google Agent Development Kit (ADK), Gemini 2.0
@@ -7,29 +7,29 @@ StudyBuddy is a sophisticated multi-agent AI system designed to help students le
 
 ---
 
-## ✨ Key Features
+##  Key Features
 
 | Feature | Description |
 |---------|-------------|
-| 📚 **Personalized Study Planning** | Creates adaptive schedules based on goals, constraints, and progress |
-| 🧑‍🏫 **Mixed-Mode Tutoring** | Explains topics with: Explanation → Key Points → Flashcards → Quiz |
-| ✏️ **Adaptive Quizzing** | Generates quizzes, grades answers, adjusts difficulty based on performance |
-| 🔄 **Spaced Repetition** | Scientifically-optimized review scheduling for 70%+ better retention |
-| 📊 **Progress Tracking** | Analyzes strengths, weaknesses, and provides actionable recommendations |
-| 💾 **Session Persistence** | Remembers your progress across sessions |
-| 🔍 **Web Search** | Can fetch current information when needed |
+|  **Personalized Study Planning** | Creates adaptive schedules based on goals, constraints, and progress |
+|  **Mixed-Mode Tutoring** | Explains topics with: Explanation -> Key Points -> Flashcards -> Quiz |
+|  **Adaptive Quizzing** | Generates quizzes, grades answers, adjusts difficulty based on performance |
+|  **Spaced Repetition** | Scientifically-optimized review scheduling for 70%+ better retention |
+|  **Progress Tracking** | Analyzes strengths, weaknesses, and provides actionable recommendations |
+|  **Session Persistence** | Remembers your progress across sessions |
+|  **Web Search** | Can fetch current information when needed |
 
 ---
 
-## 🧠 How Spaced Repetition Works
+## How Spaced Repetition Works
 
 Based on the Ebbinghaus forgetting curve research:
 
 ```
-Initial Learning → Review Day 1 → Day 3 → Day 7 → Day 14 → Day 30 → Day 60 → Day 120
+Initial Learning -> Review Day 1 -> Day 3 -> Day 7 -> Day 14 -> Day 30 -> Day 60 -> Day 120
 
 Performance adjustments:
-- Score ≥80%: Longer intervals (you've got it!)
+- Score >=80%: Longer intervals (you've got it!)
 - Score 60-79%: Standard intervals
 - Score <60%: Shorter intervals + step back
 ```
@@ -38,35 +38,35 @@ Performance adjustments:
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 study_buddy_agent (Main Orchestrator)
-├── learning_planner_agent    → Creates personalized study plans
-├── tutor_agent              → Explains concepts (mixed-mode output)
-├── quiz_agent               → Generates/grades quizzes
-├── progress_tracker_agent   → Tracks progress, manages reviews
+├── learning_planner_agent    -> Creates personalized study plans
+├── tutor_agent              -> Explains concepts (mixed-mode output)
+├── quiz_agent               -> Generates/grades quizzes
+├── progress_tracker_agent   -> Tracks progress, manages reviews
 └── Tools:
-    ├── google_search        → Current information
-    ├── save_study_plan      → Export plans to files
-    ├── record_quiz_result   → Track quiz performance
-    └── update_spaced_rep    → Schedule optimal reviews
+    ├── google_search        -> Current information
+    ├── save_study_plan      -> Export plans to files
+    ├── record_quiz_result   -> Track quiz performance
+    └── update_spaced_rep    -> Schedule optimal reviews
 ```
 
-### Required Concepts Implemented (6 of 3 required) ✅
+### Required Concepts Implemented (6 of 3 required) [OK]
 
-1. ✅ **Multi-Agent System** - 5 specialized agents coordinated by orchestrator
-2. ✅ **Tools** - Google Search + custom tools for file I/O and progress tracking
-3. ✅ **Sessions & Memory** - Session persistence with file-based storage
-4. ✅ **Loop Agents** - Validation checkers for quality assurance
-5. ✅ **Spaced Repetition Algorithm** - Scientific learning optimization
-6. ✅ **Context Engineering** - Session context injected into prompts
+1. [OK] **Multi-Agent System** - 5 specialized agents coordinated by orchestrator
+2. [OK] **Tools** - Google Search + custom tools for file I/O and progress tracking
+3. [OK] **Sessions & Memory** - Session persistence with file-based storage
+4. [OK] **Loop Agents** - Validation checkers for quality assurance
+5. [OK] **Spaced Repetition Algorithm** - Scientific learning optimization
+6. [OK] **Context Engineering** - Session context injected into prompts
 
 **Bonus:** Uses Gemini 2.0 Flash throughout (+5 points)
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### 1. Clone & Setup
 
@@ -115,12 +115,12 @@ python main.py
 
 You'll see:
 ```
-🎓 StudyBuddy - AI Learning Companion
+ StudyBuddy - AI Learning Companion
 =====================================
 
 What's your name? Alex
 
-🎓 Welcome, Alex! Study Buddy is ready.
+ Welcome, Alex! Study Buddy is ready.
 Type 'exit' to quit, 'help' for commands.
 ```
 
@@ -138,16 +138,16 @@ StudyBuddy: [Creates detailed week-by-week plan with spaced repetition]
 ```
 You: Explain binary search trees
 StudyBuddy: 
-### 1. 📖 Explanation
+### 1.  Explanation
 [Clear step-by-step explanation]
 
-### 2. 🎯 Key Points
+### 2.  Key Points
 [3-7 most important takeaways]
 
-### 3. 🗂️ Flashcards
+### 3.  Flashcards
 [4-8 Q/A pairs for review]
 
-### 4. ✏️ Quick Quiz
+### 4.  Quick Quiz
 [3-5 practice questions with answers]
 ```
 
@@ -198,7 +198,7 @@ study-buddy-final/
 
 ---
 
-## 🎯 Value Proposition
+##  Value Proposition
 
 ### For Students
 - **90% reduction** in study planning time
@@ -214,7 +214,7 @@ study-buddy-final/
 
 ---
 
-## 🔧 Future Roadmap
+## Future Roadmap
 
 - [ ] Voice interface for conversational learning
 - [ ] Gamification (streaks, XP, achievements)
@@ -231,7 +231,7 @@ MIT License - feel free to extend, modify, and build upon this project.
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Google Agent Development Kit team
 - 5-Day AI Agents Intensive Course instructors
@@ -243,4 +243,4 @@ MIT License - feel free to extend, modify, and build upon this project.
 **Track:** Agents for Good  
 **Date:** December 2025
 
-🎓 **Making quality education accessible through AI + Science** 🚀
+**Making quality education accessible through AI + Science** 

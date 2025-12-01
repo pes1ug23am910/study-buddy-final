@@ -7,7 +7,6 @@ __pycache__/
 venv/
 env/
 .venv/
-.env
 
 # IDE settings
 .vscode/
@@ -37,3 +36,12 @@ htmlcov/
 
 # Jupyter
 .ipynb_checkpoints/
+
+# Docs that shouldn't be in repo
+docs/*.drawio
+
+# Card/thumbnail images folder (too large)
+Card and thumbnail/
+
+# Internal checklists (not for public)
+MERGE_CHECKLIST.md

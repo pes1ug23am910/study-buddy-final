@@ -288,7 +288,7 @@ def _get_overall_recommendation(avg_score: float, weaknesses: list) -> str:
 def _get_schedule_message(due_count: int, upcoming: list) -> str:
     """Generate a message about the review schedule."""
     if due_count > 0:
-        return f"⚠️ You have {due_count} topic(s) due for review. Review now for best retention!"
+        return f"[!] You have {due_count} topic(s) due for review. Review now for best retention!"
     elif upcoming:
         next_topic = upcoming[0]
         return f"Next review: {next_topic['topic']} in {next_topic['days_until']} day(s)."

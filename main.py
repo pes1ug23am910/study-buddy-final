@@ -28,7 +28,7 @@ async def run_interactive():
     """
     # Get student name
     print("\n" + "=" * 60)
-    print("  🎓 StudyBuddy - AI Learning Companion")
+    print("   StudyBuddy - AI Learning Companion")
     print("=" * 60)
     
     student_name = input("\nWhat's your name? ").strip() or DEFAULT_USER_ID
@@ -56,16 +56,16 @@ async def run_interactive():
         memory_service=memory_service,
     )
     
-    print(f"\n🎓 Welcome, {student_name}! Study Buddy is ready.")
+    print(f"\n Welcome, {student_name}! Study Buddy is ready.")
     print("Type 'exit' to quit, 'help' for commands.\n")
     
     # Show greeting
-    print("StudyBuddy: Hey! I'm your AI learning companion. 🤖")
+    print("StudyBuddy: Hey! I'm your AI learning companion. ")
     print("I can help you:")
-    print("  📚 Create personalized study plans")
-    print("  🧑‍🏫 Explain any topic with flashcards")
-    print("  ✏️ Quiz you and track your progress")
-    print("  🔄 Manage your spaced repetition reviews")
+    print("   Create personalized study plans")
+    print("   Explain any topic with flashcards")
+    print("   Quiz you and track your progress")
+    print("   Manage your spaced repetition reviews")
     print("\nWhat would you like to work on today?\n")
     
     while True:
@@ -78,11 +78,11 @@ async def run_interactive():
             if user_input.lower() in {"exit", "quit", "bye"}:
                 session.save()
                 log_session_event("end", student_name)
-                print("\nStudyBuddy: Good luck with your studies! 📚✨\n")
+                print("\nStudyBuddy: Good luck with your studies! \n")
                 break
             
             if user_input.lower() == "help":
-                print("\n📖 Commands:")
+                print("\n Commands:")
                 print("  'explain [topic]' - Get an explanation with flashcards")
                 print("  'quiz [topic]' - Take a practice quiz")
                 print("  'plan [goal]' - Create a study plan")
@@ -121,11 +121,11 @@ async def run_interactive():
         except KeyboardInterrupt:
             session.save()
             log_session_event("end", student_name, "Interrupted by user")
-            print("\n\nStudyBuddy: Session saved. See you next time! 👋\n")
+            print("\n\nStudyBuddy: Session saved. See you next time! \n")
             break
         except Exception as e:
             log_event("study_buddy", "Error", {"error": str(e)}, level="error")
-            print(f"\n⚠️ Something went wrong: {e}")
+            print(f"\n[!] Something went wrong: {e}")
             print("Let's try again.\n")
 
 
@@ -183,7 +183,7 @@ def main():
     """Entry point for CLI usage."""
     # Check for API key
     if not os.environ.get("GEMINI_API_KEY"):
-        print("\n⚠️  GEMINI_API_KEY environment variable not set!")
+        print("\n[!]  GEMINI_API_KEY environment variable not set!")
         print("Please set it before running:")
         print("  export GEMINI_API_KEY='your-key-here'  # Linux/Mac")
         print("  set GEMINI_API_KEY=your-key-here       # Windows")

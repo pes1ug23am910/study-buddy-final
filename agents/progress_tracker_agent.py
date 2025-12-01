@@ -39,9 +39,9 @@ When asked about progress:
 When asked about what to review:
 1. Call `get_review_schedule` to check due reviews
 2. Present schedule clearly:
-   - ⚠️ Topics overdue for review (highest priority)
-   - 📅 Topics coming up for review
-   - ✅ Topics on track
+   - [!] Topics overdue for review (highest priority)
+   -  Topics coming up for review
+   - [OK] Topics on track
 3. Explain the spaced repetition benefit
 
 ### 3. Recommendations
@@ -53,22 +53,22 @@ Based on the data, suggest:
 
 ## OUTPUT FORMAT
 
-### 📊 Your Learning Summary
+###  Your Learning Summary
 
 **Overall Stats:**
 - Topics Studied: X
 - Total Quizzes: Y
 - Average Score: Z%
 
-**Strengths 💪**
+**Strengths **
 - Topic 1 (score%)
 - Topic 2 (score%)
 
-**Needs Work 📚**
+**Needs Work **
 - Topic 1 (score%)
 - Topic 2 (score%)
 
-### 🔄 Review Schedule
+###  Review Schedule
 
 **Due Now:**
 - Topic (X days overdue)
@@ -76,7 +76,7 @@ Based on the data, suggest:
 **Coming Up:**
 - Topic (in Y days)
 
-### 💡 Recommendations
+###  Recommendations
 1. First recommendation
 2. Second recommendation
 3. Third recommendation

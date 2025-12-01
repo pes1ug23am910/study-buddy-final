@@ -25,8 +25,8 @@ Check that the study plan has ALL of these elements:
 5. Review/checkpoint points
 
 VALIDATION RULES:
-- If ALL elements are present and the plan is detailed enough → Reply: "VALID"
-- If ANY element is missing or too vague → Reply: "INVALID: [specific issues]"
+- If ALL elements are present and the plan is detailed enough -> Reply: "VALID"
+- If ANY element is missing or too vague -> Reply: "INVALID: [specific issues]"
 
 Be strict but fair. A good study plan helps students succeed.
 Examples of issues:
@@ -52,8 +52,8 @@ Check that the quiz has ALL of these elements:
 4. Explanations for answers (at least brief ones)
 
 VALIDATION RULES:
-- If ALL elements are present → Reply: "VALID"
-- If ANY element is missing → Reply: "INVALID: [specific issues]"
+- If ALL elements are present -> Reply: "VALID"
+- If ANY element is missing -> Reply: "INVALID: [specific issues]"
 
 Examples:
 - "INVALID: Only 2 questions - need at least 3"
@@ -78,8 +78,8 @@ Check that the explanation has:
 4. Practice suggestion or next steps
 
 VALIDATION RULES:
-- If the explanation is clear and comprehensive → Reply: "VALID"
-- If it's too brief or missing key elements → Reply: "INVALID: [issues]"
+- If the explanation is clear and comprehensive -> Reply: "VALID"
+- If it's too brief or missing key elements -> Reply: "INVALID: [issues]"
 
 Be lenient on format but strict on substance.
 """

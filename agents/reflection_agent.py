@@ -50,7 +50,7 @@ Based on session data:
 
 ## OUTPUT FORMAT
 
-### 🪞 Learning Reflection
+###  Learning Reflection
 
 **What's Working:**
 - Observation 1

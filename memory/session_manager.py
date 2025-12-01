@@ -85,7 +85,7 @@ class StudyBuddySession:
         if self.review_schedule:
             due_count = self.review_schedule.get('total_due', 0)
             if due_count > 0:
-                context_parts.append(f"⚠️ {due_count} topic(s) due for review!")
+                context_parts.append(f"[!] {due_count} topic(s) due for review!")
         
         return "\n".join(context_parts)
     

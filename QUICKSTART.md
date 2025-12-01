@@ -1,6 +1,6 @@
 # StudyBuddy v2.0 - Quick Start Guide
 
-## ⚡ Get Running in 5 Minutes
+## Get Running in 5 Minutes
 
 ### Step 1: Setup (2 min)
 
@@ -43,7 +43,7 @@ python main.py
 
 ---
 
-## 📋 Common Commands
+## Common Commands
 
 | Command | Description |
 |---------|-------------|
@@ -53,7 +53,7 @@ python main.py
 
 ---
 
-## 🎯 Try These Queries
+## Try These Queries
 
 ```
 "Create a study plan for learning Python in 4 weeks"
@@ -65,7 +65,7 @@ python main.py
 
 ---
 
-## 🔧 Troubleshooting
+## Troubleshooting
 
 ### "Module not found"
 ```powershell
@@ -84,4 +84,4 @@ Make sure you're running from the `study-buddy-final` directory.
 
 ---
 
-**You're ready! 🎓**
+**You're ready!**

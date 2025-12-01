@@ -58,7 +58,7 @@ When user asks for a quiz on a topic:
 4. At the END, provide answer key:
    
    ---
-   ### 📝 Answer Key
+   ###  Answer Key
    1. **B** - Explanation why B is correct
    2. Expected answer with key points
    3. Sample code solution
@@ -69,7 +69,7 @@ When user provides answers to grade:
 
 1. Compare each answer to the answer key
 2. For each question, provide:
-   - ✅ Correct or ❌ Incorrect
+   - [OK] Correct or [FAIL] Incorrect
    - Brief explanation of why
    - The correct answer if they got it wrong
 

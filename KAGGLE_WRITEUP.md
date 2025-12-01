@@ -41,7 +41,7 @@ I could've built this as one monolithic chatbot, but the agent approach felt mor
 This is honestly the coolest part. Based on Ebbinghaus forgetting curve research:
 
 ```
-Learn → Review Day 1 → Day 3 → Day 7 → Day 14 → Day 30 → etc.
+Learn -> Review Day 1 -> Day 3 -> Day 7 -> Day 14 -> Day 30 -> etc.
 
 The twist:
 - Score 80%+? Push the next review further out. You've got this.
@@ -54,14 +54,14 @@ Result? Up to 70% better long-term retention vs cramming. Not bad.
 
 ```
 study_buddy_agent (the "receptionist")
-├── learning_planner_agent    → makes study schedules
-├── tutor_agent              → explains things (with flashcards!)
-├── quiz_agent               → generates quizzes, grades them
-├── progress_tracker_agent   → tells you how you're doing
+├── learning_planner_agent    -> makes study schedules
+├── tutor_agent              -> explains things (with flashcards!)
+├── quiz_agent               -> generates quizzes, grades them
+├── progress_tracker_agent   -> tells you how you're doing
 └── Tools:
-    ├── google_search        → for current info
-    ├── save_study_plan      → exports to markdown
-    └── record_quiz_result   → tracks your scores
+    ├── google_search        -> for current info
+    ├── save_study_plan      -> exports to markdown
+    └── record_quiz_result   -> tracks your scores
 ```
 
 ### What Concepts I Used (turns out, quite a few)
@@ -118,8 +118,8 @@ I call this "mixed-mode output" - you get explanation, summary, flashcards, AND 
 ```
 You finished a quiz on Python Basics: 85%
 
-→ That's pretty good! Moving your next review from 1 day to 3 days.
-→ Repetition level: 1 → 2
+-> That's pretty good! Moving your next review from 1 day to 3 days.
+-> Repetition level: 1 -> 2
 ```
 
 ## Why This Matters (Impact)

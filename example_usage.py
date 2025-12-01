@@ -42,7 +42,7 @@ async def demo_study_plan():
     )
     
     print(response)
-    print("\n✨ Notice the built-in review schedule!\n")
+    print("\n Notice the built-in review schedule!\n")
 
 
 # ============================================================================
@@ -59,7 +59,7 @@ async def demo_explanation():
     )
     
     print(response)
-    print("\n✨ Notice the 4-section format: Explanation → Key Points → Flashcards → Quiz\n")
+    print("\n Notice the 4-section format: Explanation -> Key Points -> Flashcards -> Quiz\n")
 
 
 # ============================================================================
@@ -76,7 +76,7 @@ async def demo_quiz():
     )
     
     print(response)
-    print("\n✨ Quizzes include varied question types and answer keys!\n")
+    print("\n Quizzes include varied question types and answer keys!\n")
 
 
 # ============================================================================
@@ -111,7 +111,7 @@ async def demo_spaced_repetition():
     schedule = tracker.get_review_schedule()
     print("\nCurrent Review Schedule:")
     for item in schedule.get('upcoming_reviews', []):
-        print(f"  📅 {item['topic']}: in {item['days_until']} day(s)")
+        print(f"   {item['topic']}: in {item['days_until']} day(s)")
 
 
 # ============================================================================
@@ -128,7 +128,7 @@ async def demo_progress():
     )
     
     print(response)
-    print("\n✨ Progress tracking helps identify strengths and weaknesses!\n")
+    print("\n Progress tracking helps identify strengths and weaknesses!\n")
 
 
 # ============================================================================
@@ -160,7 +160,7 @@ async def demo_sessions():
     print(f"Current topic: {loaded.current_topic}")
     print(f"Quiz results: {loaded.quiz_results}")
     
-    print("\n✨ Sessions persist across restarts!\n")
+    print("\n Sessions persist across restarts!\n")
 
 
 # ============================================================================
@@ -195,7 +195,7 @@ async def demo_full_cycle():
         "Give me 3 quick questions on Python lists")
     print(r3[:500] + "...\n" if len(r3) > 500 else r3)
     
-    print("\n✨ Complete learning cycle: Plan → Learn → Practice!")
+    print("\n Complete learning cycle: Plan -> Learn -> Practice!")
 
 
 # ============================================================================
@@ -262,17 +262,17 @@ These demos showcase different features:
     print("=" * 60)
     print("""
 Check the output/ folder for saved data:
-  • output/study_plans/  - Study plans
-  • output/sessions/     - Session data
-  • output/progress/     - Progress tracking
-  • output/spaced_repetition/ - Review schedules
+  - output/study_plans/  - Study plans
+  - output/sessions/     - Session data
+  - output/progress/     - Progress tracking
+  - output/spaced_repetition/ - Review schedules
 """)
 
 
 if __name__ == "__main__":
     # Check API key
     if not os.environ.get("GEMINI_API_KEY"):
-        print("\n⚠️  GEMINI_API_KEY not set!")
+        print("\n[!]  GEMINI_API_KEY not set!")
         print("Some demos (4, 6) work without it, others need it.\n")
     
     asyncio.run(main())

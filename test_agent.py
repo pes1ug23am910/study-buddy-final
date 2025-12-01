@@ -21,55 +21,55 @@ def print_header(text: str):
 
 def test_imports():
     """Test that all imports work."""
-    print("🔍 Testing imports...\n")
+    print(" Testing imports...\n")
     
     errors = []
     
     # Config
     try:
         from config.settings import MODEL, APP_NAME
-        print("✅ config.settings")
+        print("[OK] config.settings")
     except Exception as e:
         errors.append(f"config.settings: {e}")
-        print(f"❌ config.settings: {e}")
+        print(f"[FAIL] config.settings: {e}")
     
     # Memory modules
     try:
         from memory.spaced_repetition import SpacedRepetitionScheduler
-        print("✅ memory.spaced_repetition")
+        print("[OK] memory.spaced_repetition")
     except Exception as e:
         errors.append(f"memory.spaced_repetition: {e}")
-        print(f"❌ memory.spaced_repetition: {e}")
+        print(f"[FAIL] memory.spaced_repetition: {e}")
     
     try:
         from memory.session_manager import StudyBuddySession, ProgressTracker
-        print("✅ memory.session_manager")
+        print("[OK] memory.session_manager")
     except Exception as e:
         errors.append(f"memory.session_manager: {e}")
-        print(f"❌ memory.session_manager: {e}")
+        print(f"[FAIL] memory.session_manager: {e}")
     
     # Tools
     try:
         from tools.file_tools import save_study_plan_to_file, save_notes_to_file
-        print("✅ tools.file_tools")
+        print("[OK] tools.file_tools")
     except Exception as e:
         errors.append(f"tools.file_tools: {e}")
-        print(f"❌ tools.file_tools: {e}")
+        print(f"[FAIL] tools.file_tools: {e}")
     
     try:
         from tools.progress_tools import record_quiz_result
-        print("✅ tools.progress_tools")
+        print("[OK] tools.progress_tools")
     except Exception as e:
         errors.append(f"tools.progress_tools: {e}")
-        print(f"❌ tools.progress_tools: {e}")
+        print(f"[FAIL] tools.progress_tools: {e}")
     
     # Observability
     try:
         from observability.logger import log_event
-        print("✅ observability.logger")
+        print("[OK] observability.logger")
     except Exception as e:
         errors.append(f"observability.logger: {e}")
-        print(f"❌ observability.logger: {e}")
+        print(f"[FAIL] observability.logger: {e}")
     
     # Agents (these need google.adk)
     try:
@@ -78,17 +78,17 @@ def test_imports():
         from agents.quiz_agent import quiz_agent
         from agents.progress_tracker_agent import progress_tracker
         from agents.study_buddy_agent import study_buddy_agent
-        print("✅ agents (all)")
+        print("[OK] agents (all)")
     except Exception as e:
         errors.append(f"agents: {e}")
-        print(f"❌ agents: {e}")
+        print(f"[FAIL] agents: {e}")
     
     return len(errors) == 0
 
 
 def test_spaced_repetition():
     """Test the spaced repetition scheduler."""
-    print("🔍 Testing spaced repetition...\n")
+    print(" Testing spaced repetition...\n")
     
     from memory.spaced_repetition import SpacedRepetitionScheduler
     
@@ -123,14 +123,14 @@ def test_spaced_repetition():
     
     # Verify logic: low performance should have shorter interval
     assert days_low <= days_med <= days_high, "Interval logic incorrect!"
-    print("\n✅ Spaced repetition logic verified!")
+    print("\n[OK] Spaced repetition logic verified!")
     
     return True
 
 
 def test_session_manager():
     """Test session creation and persistence."""
-    print("🔍 Testing session manager...\n")
+    print(" Testing session manager...\n")
     
     from memory.session_manager import StudyBuddySession
     
@@ -164,14 +164,14 @@ def test_session_manager():
         os.remove(session_path)
         print("  Cleaned up test file")
     
-    print("\n✅ Session manager working!")
+    print("\n[OK] Session manager working!")
     
     return True
 
 
 def test_file_tools():
     """Test file saving tools."""
-    print("🔍 Testing file tools...\n")
+    print(" Testing file tools...\n")
     
     from tools.file_tools import save_study_plan_to_file, save_notes_to_file
     
@@ -188,59 +188,59 @@ def test_file_tools():
         os.remove(test_path)
         print("  Cleaned up test file")
     
-    print("\n✅ File tools working!")
+    print("\n[OK] File tools working!")
     
     return True
 
 
 def test_environment():
     """Check environment setup."""
-    print("🔍 Checking environment...\n")
+    print(" Checking environment...\n")
     
     # Python version
     print(f"  Python: {sys.version}")
     if sys.version_info < (3, 9):
-        print("  ⚠️  Python 3.9+ recommended")
+        print("  [!]  Python 3.9+ recommended")
     else:
-        print("  ✅ Python version OK")
+        print("  [OK] Python version OK")
     
     # API key
     api_key = os.environ.get("GEMINI_API_KEY")
     if api_key:
-        print(f"  ✅ GEMINI_API_KEY set ({len(api_key)} chars)")
+        print(f"  [OK] GEMINI_API_KEY set ({len(api_key)} chars)")
     else:
-        print("  ⚠️  GEMINI_API_KEY not set (needed for API tests)")
+        print("  [!]  GEMINI_API_KEY not set (needed for API tests)")
     
     # Check dependencies
     print("\n  Checking dependencies...")
     
     try:
         import google.genai
-        print("  ✅ google-genai")
+        print("  [OK] google-genai")
     except ImportError:
-        print("  ❌ google-genai not installed")
+        print("  [FAIL] google-genai not installed")
     
     try:
         from google.adk import Agent
-        print("  ✅ google-adk")
+        print("  [OK] google-adk")
     except ImportError:
-        print("  ❌ google-adk not installed")
+        print("  [FAIL] google-adk not installed")
     
     try:
         from rich.console import Console
-        print("  ✅ rich")
+        print("  [OK] rich")
     except ImportError:
-        print("  ❌ rich not installed")
+        print("  [FAIL] rich not installed")
     
     return True
 
 
 async def test_api_call():
     """Test actual API call (optional)."""
-    print("🔍 Testing API call...\n")
+    print(" Testing API call...\n")
     
     if not os.environ.get("GEMINI_API_KEY"):
-        print("  ⚠️  Skipping - no API key")
+        print("  [!]  Skipping - no API key")
         return None
     
     try:
@@ -259,11 +259,11 @@ async def test_api_call():
         if os.path.exists(session_path):
             os.remove(session_path)
         
-        print("\n✅ API working!")
+        print("\n[OK] API working!")
         return True
         
     except Exception as e:
-        print(f"  ❌ API test failed: {e}")
+        print(f"  [FAIL] API test failed: {e}")
         return False
 
 
@@ -280,7 +280,7 @@ async def main():
     # Import tests
     print_header("2. Import Tests")
     if not test_imports():
-        print("\n❌ Import tests failed. Fix imports before continuing.")
+        print("\n[FAIL] Import tests failed. Fix imports before continuing.")
         return
     
     # Unit tests
@@ -288,21 +288,21 @@ async def main():
     try:
         test_spaced_repetition()
     except Exception as e:
-        print(f"❌ Error: {e}")
+        print(f"[FAIL] Error: {e}")
         all_passed = False
     
     print_header("4. Session Manager Tests")
     try:
         test_session_manager()
     except Exception as e:
-        print(f"❌ Error: {e}")
+        print(f"[FAIL] Error: {e}")
         all_passed = False
     
     print_header("5. File Tools Tests")
     try:
         test_file_tools()
     except Exception as e:
-        print(f"❌ Error: {e}")
+        print(f"[FAIL] Error: {e}")
         all_passed = False
     
     # API test (optional)
@@ -316,7 +316,7 @@ async def main():
     # Summary
     print_header("Test Summary")
     if all_passed:
-        print("🎉 All tests passed!")
+        print(" All tests passed!")
         print("""
 Your StudyBuddy is ready!
 
@@ -327,7 +327,7 @@ Next steps:
 4. Submit on Kaggle
         """)
     else:
-        print("⚠️  Some tests failed. Check errors above.")
+        print("[!]  Some tests failed. Check errors above.")
 
 
 if __name__ == "__main__":

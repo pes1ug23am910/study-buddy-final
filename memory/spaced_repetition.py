@@ -15,10 +15,10 @@ class SpacedRepetitionScheduler:
     Spaced repetition scheduler based on forgetting curve research.
     
     The algorithm schedules reviews at increasing intervals:
-    1 day → 3 days → 7 days → 14 days → 30 days → 60 days → 120 days
+    1 day -> 3 days -> 7 days -> 14 days -> 30 days -> 60 days -> 120 days
     
     Performance-based adjustments:
-    - High performance (≥80%): Longer intervals (1.2x)
+    - High performance (>=80%): Longer intervals (1.2x)
     - Medium performance (60-79%): Standard intervals  
     - Low performance (<60%): Shorter intervals (0.7x), step back if needed
     """

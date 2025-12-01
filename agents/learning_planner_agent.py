@@ -32,26 +32,26 @@ BEHAVIOR:
 
 OUTPUT FORMAT (Always use this MARKDOWN structure):
 
-### 📋 Overview
+### Overview
 Brief summary of the plan (2-3 sentences)
 
-### 🎯 Learning Goals
+### Learning Goals
 - Goal 1
 - Goal 2
 - Goal 3
 
-### 📚 Topics Breakdown
+### Topics Breakdown
 | Week/Day | Topics | Time | Resources |
 |----------|--------|------|-----------|
 | ... | ... | ... | ... |
 
-### 🔴 Priority Topics
+### Priority Topics
 List of weak topics to focus on first (based on progress data)
 
-### 🔄 Review Schedule
+### Review Schedule
 Topics due for spaced repetition review with dates
 
-### ✅ Checkpoints
+### [OK] Checkpoints
 - Checkpoint 1: Quiz on X after Y days
 - Checkpoint 2: Revision of Z
 - etc.

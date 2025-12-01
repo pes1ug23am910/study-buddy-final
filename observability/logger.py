@@ -47,7 +47,7 @@ def log_event(
     
     console.log(
         f"[{color}]{timestamp}[/] | "
-        f"[bold green]{agent_name}[/] → "
+        f"[bold green]{agent_name}[/] -> "
         f"[yellow]{action}[/]"
     )
     
@@ -65,8 +65,8 @@ def log_agent_call(
         return
     
     console.log(
-        f"[bold blue]🔗 Agent Call[/]: "
-        f"[green]{from_agent}[/] → [cyan]{to_agent}[/]"
+        f"[bold blue] Agent Call[/]: "
+        f"[green]{from_agent}[/] -> [cyan]{to_agent}[/]"
     )
     console.log(f"  Query: [dim]{query[:100]}{'...' if len(query) > 100 else ''}[/]")
 
@@ -81,7 +81,7 @@ def log_tool_call(
         return
     
     console.log(
-        f"[bold magenta]🔧 Tool Call[/]: "
+        f"[bold magenta] Tool Call[/]: "
         f"[green]{agent_name}[/] using [yellow]{tool_name}[/]"
     )
     
@@ -119,13 +119,13 @@ def log_session_event(
         return
     
     emoji_map = {
-        "start": "🚀",
-        "end": "👋",
-        "save": "💾",
-        "load": "📂",
-        "error": "❌"
+        "start": "[START]",
+        "end": "[END]",
+        "save": "[SAVE]",
+        "load": "[LOAD]",
+        "error": "[FAIL]"
     }
-    emoji = emoji_map.get(event_type, "📌")
+    emoji = emoji_map.get(event_type, "")
     
     console.log(
         f"{emoji} [bold]Session {event_type}[/]: "
@@ -140,7 +140,7 @@ def display_progress_summary(progress_data: Dict[str, Any]) -> None:
     if not USE_OBSERVABILITY:
         return
     
-    table = Table(title="📊 Learning Progress", show_header=True)
+    table = Table(title="Learning Progress", show_header=True)
     table.add_column("Topic", style="cyan")
     table.add_column("Attempts", justify="right")
     table.add_column("Last Score", justify="right")
@@ -167,7 +167,7 @@ def display_review_schedule(schedule: Dict[str, Any]) -> None:
     
     if due:
         console.print(Panel(
-            "\n".join([f"⚠️ {r['topic']} (overdue by {r.get('overdue_days', 0)} days)" 
+            "\n".join([f"[!] {r['topic']} (overdue by {r.get('overdue_days', 0)} days)" 
                       for r in due]),
             title="[red]Due for Review[/]",
             border_style="red"
@@ -175,7 +175,7 @@ def display_review_schedule(schedule: Dict[str, Any]) -> None:
     
     if upcoming:
         console.print(Panel(
-            "\n".join([f"📅 {r['topic']} in {r['days_until']} day(s)" 
+            "\n".join([f"- {r['topic']} in {r['days_until']} day(s)" 
                       for r in upcoming]),
             title="[blue]Upcoming Reviews[/]",
             border_style="blue"
