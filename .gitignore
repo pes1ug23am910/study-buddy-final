@@ -45,3 +45,11 @@ Card and thumbnail/
 
 # Internal checklists (not for public)
 MERGE_CHECKLIST.md
+HUMANIZATION_CHECKLIST.md
+
+# Utility scripts (not needed in repo)
+remove_emojis.py
+
+# Video materials (personal reference only)
+VIDEO_CHECKLIST.md
+VIDEO_SCRIPT.md
