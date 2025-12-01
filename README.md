@@ -165,7 +165,7 @@ StudyBuddy: [Shows stats, strengths, weaknesses, and recommendations]
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 study-buddy-final/
@@ -225,7 +225,7 @@ study-buddy-final/
 
 ---
 
-## 📜 License
+## License
 
 MIT License - feel free to extend, modify, and build upon this project.
 
