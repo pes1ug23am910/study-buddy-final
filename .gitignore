@@ -1,55 +1,78 @@
-# Byte-compiled / optimized / DLL files
+# ============================
+# StudyBuddy .gitignore
+# ============================
+
+# ---------- Python ----------
 __pycache__/
 *.py[cod]
 *$py.class
+*.pyo
+*.pyd
 
-# Virtual environments
+# ---------- Virtual environments ----------
 venv/
 env/
 .venv/
+ENV/
 
-# IDE settings
+# ---------- IDE / Editor ----------
 .vscode/
 .idea/
 *.swp
 *.swo
+*~
 
-# Output files (data generated at runtime)
+# ---------- Runtime output (generated at runtime, not source) ----------
 output/
 
-# Environment files with secrets
+# ---------- Environment / Secrets ----------
 .env
+.env.*
 
-# OS files
+# ---------- OS ----------
 .DS_Store
 Thumbs.db
+desktop.ini
+ehthumbs.db
 
-# Distribution / packaging
+# ---------- Distribution / Packaging ----------
 dist/
 build/
 *.egg-info/
+*.egg
+*.whl
 
-# Testing
+# ---------- Testing ----------
 .pytest_cache/
 .coverage
 htmlcov/
+.tox/
+.nox/
 
-# Jupyter
+# ---------- Jupyter ----------
 .ipynb_checkpoints/
 
-# Docs that shouldn't be in repo
+# ---------- Binary / Large assets ----------
 docs/*.drawio
-
-# Card/thumbnail images folder (too large)
 Card and thumbnail/
 
-# Internal checklists (not for public)
+# ---------- Internal / non-public docs ----------
 MERGE_CHECKLIST.md
 HUMANIZATION_CHECKLIST.md
-
-# Utility scripts (not needed in repo)
-remove_emojis.py
-
-# Video materials (personal reference only)
+FINAL_CHECKLIST.md
+KAGGLE_SUBMISSION.md
+KAGGLE_WRITEUP.md
 VIDEO_CHECKLIST.md
 VIDEO_SCRIPT.md
+
+# ---------- Utility scripts (internal tooling) ----------
+remove_emojis.py
+demo_video.py
+
+# ---------- Kaggle notebooks (large, auto-generated) ----------
+studybuddy_kaggle.ipynb
+studybuddy_kaggle_full.ipynb
+
+# ---------- Logs ----------
+*.log
+logs/

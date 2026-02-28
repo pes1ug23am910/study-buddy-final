@@ -1,87 +1,64 @@
-# StudyBuddy v2.0 - Quick Start Guide
+# Quick Start
 
-## Get Running in 5 Minutes
+Get StudyBuddy running in under 5 minutes.
 
-### Step 1: Setup (2 min)
+## 1. Environment setup
 
-```powershell
-# Navigate to project
+```bash
 cd study-buddy-final
-
-# Create virtual environment
 python -m venv venv
 
-# Activate it
-.\venv\Scripts\activate
+# Linux / macOS
+source venv/bin/activate
+# Windows (PowerShell)
+.\venv\Scripts\Activate.ps1
 
-# Install dependencies
 pip install -r requirements.txt
 ```
 
-### Step 2: API Key (1 min)
+## 2. API key
 
-```powershell
-# Set your Gemini API key
-$env:GEMINI_API_KEY = "your-key-here"
+```bash
+# Option A — .env file (recommended)
+cp .env.example .env        # then edit .env and paste your key
 
-# Or create .env file
-copy .env.example .env
-# Edit .env and add your key
+# Option B — shell variable
+export GEMINI_API_KEY="your-key-here"          # bash
+$env:GEMINI_API_KEY = "your-key-here"          # PowerShell
 ```
 
-### Step 3: Test (1 min)
+Get a free key at [Google AI Studio](https://aistudio.google.com/app/apikey).
 
-```powershell
+## 3. Verify
+
+```bash
 python test_agent.py
 ```
 
-### Step 4: Run (1 min)
+## 4. Run
 
-```powershell
+```bash
 python main.py
 ```
 
----
+## Useful commands
 
-## Common Commands
+| Command | Purpose |
+|---|---|
+| `python main.py` | Interactive chat mode |
+| `python example_usage.py` | Guided demo menu (7 scenarios) |
+| `python test_agent.py` | Offline test suite |
 
-| Command | Description |
-|---------|-------------|
-| `python main.py` | Start interactive mode |
-| `python example_usage.py` | Run demo examples |
-| `python test_agent.py` | Run test suite |
-
----
-
-## Try These Queries
+## Sample queries
 
 ```
-"Create a study plan for learning Python in 4 weeks"
-"Explain recursion with examples"
-"Quiz me on data structures"
-"What should I review today?"
-"Show my progress"
+Create a study plan for learning Python in 4 weeks
+Explain recursion with examples
+Quiz me on data structures
+What should I review today?
+Show my progress
 ```
 
----
+## Problems?
 
-## Troubleshooting
-
-### "Module not found"
-```powershell
-# Make sure venv is active
-.\venv\Scripts\activate
-pip install -r requirements.txt
-```
-
-### "API key not found"
-```powershell
-$env:GEMINI_API_KEY = "your-key"
-```
-
-### Import errors
-Make sure you're running from the `study-buddy-final` directory.
-
----
-
-**You're ready!**
+See [docs/troubleshooting.md](docs/troubleshooting.md).
